@@ -58,10 +58,23 @@ Mini task:
 */
 
 let inserisciUnNumero = prompt ("inserisci un numero da 1 a 5");
+console.log(inserisciUnNumero);
 
 function generaNumero(min, max){
-    let result = Math.floor(Math.random() * max) + min; 
-    return result;   
+    //let somma = 
+    return Math.floor(Math.random() * max) + min; 
+        
 }
 
-console.log(generaNumero(1, 5));
+let numeroComputer = generaNumero(1,5);
+console.log(numeroComputer);
+
+/*
+function sommaNumeri(num1, num2){
+    let somma = num1 + num2;
+    return somma
+
+}
+
+console.log(sommaNumeri(inserisciUnNumero, result))
+*/
