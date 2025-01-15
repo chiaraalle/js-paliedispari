@@ -17,17 +17,22 @@ Minitask:
 
 let inserisciParola = prompt ("inserisci una parola")
 
-function reverse(x){
+function isPalindrome(x){
     let result = x.split("").reverse().join("");
 
-    if(inserisciParola == x) {
+    if(result == x) {
         return true;
-    } 
+        //console.log(`La parola ${inserisciParola} è palidroma`)
+    } else {
+        return false;
+        //console.log(`La parola ${inserisciParola} non è palidroma`)
+    }
     
 }
 
-x = (inserisciParola)
-if(inserisciParola) {
+ //isPalindrome(inserisciParola)
+
+if(isPalindrome(inserisciParola) == true) {
     console.log(`La parola ${inserisciParola} è palidroma`)
 } else {
     console.log(`La parola ${inserisciParola} non è palidroma`)
