@@ -56,7 +56,8 @@ Mini task:
 -creo una funzione per avere il risultato della somma dei due numeri e, tramite il modulo %, stabilisco se il numero è pari o dispari.
 -stampo il risultato con il vincitore
 */
-
+let sceltaUtente = prompt ("scegli: pari o dispari?");
+console.log(`Hai scelto: ${sceltaUtente}`);
 let numeroUtente = parseInt(prompt ("inserisci un numero da 1 a 5"));
 console.log(`Il numero che hai scelto è: ${numeroUtente}`);
 
@@ -69,21 +70,26 @@ let numeroComputer = generaNumero(1,5);
 console.log(`Il numero del computer è: ${numeroComputer}`);
 
 //funzione che somma i numeri dell'utente e del computer
-function calcoloDeiNumeri(num1, num2){
+function calcoloNumeri(num1, num2){
     let somma = num1 + num2;
     return somma
 }
-let sommaNumeri = calcoloDeiNumeri;
-console.log(`La somma dei due numeri è: ${sommaNumeri(numeroUtente, numeroComputer)}`)
+let sommaNumeri = calcoloNumeri(numeroUtente, numeroComputer);
+console.log(`La somma dei due numeri è: ${sommaNumeri}`)
 
 //funzione che verifica se il numero è pari o dispari
 function verificaNumeriPariODispari(x){
-    if(sommaNumeri % 2) {
-        return console.log("questo numero è pari")
+    if(x % 2 == 0) {
+        console.log("questo numero è pari")
     } else {
-        return console.log("questo numero è dispari")
+        console.log("questo numero è dispari")
     }
 }
 
 verificaNumeriPariODispari(sommaNumeri)
 
+if() {
+    console.log("questo numero è pari")
+} else {
+    console.log("questo numero è dispari")
+}
