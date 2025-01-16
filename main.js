@@ -15,31 +15,32 @@ Minitask:
 
 */
 
-/* 
-let inserisciParola = prompt ("inserisci una parola")
+ 
+let parola = prompt ("inserisci una parola"); 
+console.log(`La parola che hai scelto è: ${parola}`); 
 
-function isPalindrome(x){
+function isPalindrome(x){   // possiamo anche fare un ciclo for (let i= parola.length -1; i >= 0; i--) e dentro utilizzo charAt e una condizione 
     let result = x.split("").reverse().join("");
 
     if(result == x) {
         return true;
-        //console.log(`La parola ${inserisciParola} è palidroma`)
+        //console.log(`La parola ${parola} è palidroma`)
     } else {
         return false;
-        //console.log(`La parola ${inserisciParola} non è palidroma`)
+        //console.log(`La parola ${parola} non è palidroma`)
     }
     
 }
 
- //isPalindrome(inserisciParola)
+ //isPalindrome(parola)
 
-if(isPalindrome(inserisciParola) == true) {
-    console.log(`La parola ${inserisciParola} è palidroma`)
+if(isPalindrome(parola) == true) {
+    console.log(`La parola ${parola} è palidroma`)
 } else {
-    console.log(`La parola ${inserisciParola} non è palidroma`)
+    console.log(`La parola ${parola} non è palidroma`)
 }
 
- */
+ 
 
 
 /*Pari e Dispari 
@@ -70,7 +71,7 @@ let numeroComputer = generaNumero(1,5);
 console.log(`Il numero del computer è: ${numeroComputer}`);
 
 //funzione che somma i numeri dell'utente e del computer
-function calcoloNumeri(num1, num2){
+function calcoloNumeri(num1, num2){   //posso creare solo la variabile somma senza la funzione e fare il calcolo 
     let somma = num1 + num2;
     return somma
 }
@@ -79,17 +80,20 @@ console.log(`La somma dei due numeri è: ${sommaNumeri}`)
 
 //funzione che verifica se il numero è pari o dispari
 function verificaNumeriPariODispari(x){
-    if(x % 2 == 0) {
+    if(x % 2 === 0) {
+        risultato = "pari";
         console.log("questo numero è pari")
+    return risultato;
     } else {
+        risultato = "dispari";
         console.log("questo numero è dispari")
+        return risultato;
     }
 }
 
-verificaNumeriPariODispari(sommaNumeri)
-
-if() {
-    console.log("questo numero è pari")
+let pariODispari = verificaNumeriPariODispari(sommaNumeri)
+if(sceltaUtente === pariODispari) {
+    console.log("Hai vinto")
 } else {
-    console.log("questo numero è dispari")
+    console.log("Hai perso")
 }
